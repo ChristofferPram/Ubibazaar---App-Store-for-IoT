@@ -6,20 +6,22 @@ The Internet of Things (IoT) is an environment in which objects, animals or peop
 
 The development of the Internet of Things has expanded drastically the last few years. A lot of electronics and robotics have been created with the need of monitoring and controlling them, such as sensors, measure devices, smart devices and 3D printers. The huge increase of unique \textit{Things} is due to the makers innovation. This innovation is caused by the evolution of the maker culture and the increased availability of Do-It-Yourself (DIY) from guides and blogs on the Internet.
 
-All these things are created by different people, with different experiences and different tools. A serious challenge of this free development is that the Internet of Things will become a huge complex structure of hardware that will have difficulties communicating with each other.\cite{standardChallenge} And that is why we need to develop shared standards and infrastructures Too make the innovation regarding Internet of Things more efficient, there is a need to gather 
+All these things are created by different people, with different experiences and different tools. Mark van Rijmenam means that one of the biggest challenges of this free development is that the Internet of Things will become a huge complex structure of hardware that will have difficulties communicating and interacting with each other.\cite{standardChallenge} That is why we need to develop shared, global standards and infrastructures so the innovation can become more efficient and the technology can be more available.
 
+Chris Kocher pointed out another problem: "With so many players involved with the IoT, there are bound to be ongoing turf wars as legacy companies seek to protect their proprietary systems advantages and open systems proponents try to set new standards.".\cite{standardChallenge2} Standardized platforms for Internet of Things are not here yet, and so makers and researchers are in lack of a common distribution channel where to share the apps of different things.
 
+Ubibazaar is meant to be such a distribution channel. It is supposed to share software code like IoT apps in an app store (inspired by mobile app stores) which intentionally will increase the availability and usability of such distribution. Ideally will it support the whole range of different hardware and platforms, but the most popular open-source platforms (Arduino and Raspberry Pi) will be prioritised.
 
+Simon Stastny has already made a prototype of this app store, Ubibazaar\cite{ubibazaar}, where he implemented support for running IoT apps on the Raspberry Pi platform via the app store. Since this protoype lacks the ability to support the Arduino platform, the motivation for this thesis is to develop such functionality for the Arduino platform and support deployment on it wirelessly with the app store.
 
+\(\mu\)C Software Store\cite{mucstore} is another app store already developed and supports the functionality on this area. It focuses on implementing apps on Arduino wirelessly through a Bluetooth connection, with a self-made app store on the Android operating system. But the uploads of skteches are inconsistent, since a physical memory check is needed to see if the app was installed successfully.
 
+Yet another project, called oSNAP\cite{osnap}, is able to establish a Bluetooth connection with the Arduino Fio microcontroller and run specific deployed tasks. However it does not upload a sketch wirelessly onto the microcontroller, but that is possible by using a modified USB-to-XBee adaptor, such as XBee Explorer USB.\cite{arduinofio} 
 
-"Describe the reason for doing the research, the topic of interest, why it is important or useful to study this, the specific research question(s) asked and the objectives set. Research without a purpose is unlikely to be good research." (Oates 2005)
+This project is going to test a new solution by using the Arduino Uno with a Bluefruit EZ-Link Shield\cite{shield} and connect it to Ubibazaar developed on the Android platform via Bluetooth. The focus should be on if this can be done more user-friendly than it has been previously and also make a selection of apps from a database available.
 
+RQ1: How easily can apps be deployed on Arduino through an IoT app store on Android?
 
-Write in this section about the following:
-What is the problem? Whose problem is it? Refer to 2-3 good scientific references that confirm for the reader that this is actually a relevant problem.
+RQ2: Will the solution be user-friendly enough when developed?
 
-
-What is done earlier to address this problem? Give 4-5 good references that illustrate the different approaches taken by other researchers to solve this problem. (you might also consider to do an in-depth literature review as part of your autumn project).
-What is wrong with earlier research? Did they not manage to solve the problem? Why? Why is your approach going to be better? What new knowledge do you plan to add?
-Summarize with a list of clearly defined research questions. One main question and 2-3 sub-questions related to the main question. Note that the sub-questions should contribute to answer the main question.
+RQ3: Is an app store the correct solution for distribution of IoT apps?
